@@ -22,6 +22,13 @@ const Profile: React.FC<ProfileProps> = ({
     image,
     children
 }) => {
+
+    if (age > 100) {
+        return <Text>Yes, I'm old</Text>
+	} else {
+        return <Text>I'm quite young</Text>
+    }
+
     return <View style={styles.container}>
         {image}
         <View style={styles.header}>
