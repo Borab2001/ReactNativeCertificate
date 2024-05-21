@@ -9,7 +9,7 @@ export default function HomeScreen() {
 			<SafeAreaView style={styles.section}>
 				<Text style={styles.title}>Hello World</Text>
 				<Text style={styles.subtitle}>Welcome back mate</Text>
-				<Profile firstName={"Bora"} lastName={"Balos"} age={23} />
+				<Profile firstName={"Bora"} lastName={"Balos"} role={"Software Engineer at Capgemini ♠️"} age={23} />
 			</SafeAreaView>
 		</SafeAreaProvider>
 	);

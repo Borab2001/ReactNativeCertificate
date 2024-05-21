@@ -4,13 +4,26 @@ import { styles } from "./Profile.style";
 import { FontAwesome6 } from '@expo/vector-icons';
 import { Feather } from '@expo/vector-icons';
 
-const Profile = () => {
+interface ProfileProps {
+    firstName: string,
+    lastName: string,
+    role: string,
+    age: number,
+}
+
+
+const Profile: React.FC<ProfileProps> = ({
+    firstName,
+    lastName,
+    role,
+    age
+}) => {
     return <View style={styles.container}>
         <View style={styles.header}>
             <Image style={styles.avatar} source={{ uri: "https://media.licdn.com/dms/image/C4D03AQGHweB6Q1fYiw/profile-displayphoto-shrink_800_800/0/1621341335727?e=1721260800&v=beta&t=p8-GYnMoyo3zUDd2u8v2rYmkdm4wiRD3x-mR9qInwQo" }} />
             <View style={styles.headerText}>
-                <Text style={styles.name}>Bora Balos</Text>
-                <Text>Software Engineer at Capgemini ♠️</Text>
+                <Text style={styles.name}>{firstName} {lastName}</Text>
+                <Text>{role} | {age}</Text>
             </View>
         </View>
         <View style={styles.social}>
