@@ -31,8 +31,7 @@ export const styles = StyleSheet.create({
     avatar: {
         width: 64,
         height: 64,
-        borderRadius: "50%",
-        // overflow: "hidden"
+        borderRadius: 32,
     },
     name : {
         fontSize: 22,
@@ -45,7 +44,7 @@ export const styles = StyleSheet.create({
         paddingTop: 4
     },
     socialButtons: {
-        borderRadius: "50%",
+        borderRadius: 32,
         padding: 10,
         backgroundColor: "#eee"
     }
