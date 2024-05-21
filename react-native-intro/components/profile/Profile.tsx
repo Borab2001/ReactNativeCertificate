@@ -9,6 +9,7 @@ interface ProfileProps {
     lastName: string;
     role: string;
     age: number;
+    image: React.ReactElement,
     children: React.ReactNode;
 }
 
@@ -18,9 +19,11 @@ const Profile: React.FC<ProfileProps> = ({
     lastName,
     role,
     age,
+    image,
     children
 }) => {
     return <View style={styles.container}>
+        {image}
         <View style={styles.header}>
             <Image style={styles.avatar} source={{ uri: "https://media.licdn.com/dms/image/C4D03AQGHweB6Q1fYiw/profile-displayphoto-shrink_800_800/0/1621341335727?e=1721260800&v=beta&t=p8-GYnMoyo3zUDd2u8v2rYmkdm4wiRD3x-mR9qInwQo" }} />
             <View style={styles.headerText}>

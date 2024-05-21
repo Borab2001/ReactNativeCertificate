@@ -9,7 +9,7 @@ export const styles = StyleSheet.create({
 		gap: 12,
 		marginHorizontal: 16,
 		marginVertical: 24,
-        padding: 16,
+        paddingBottom: 16,
         borderRadius: 8,
         shadowColor: "#000",
         shadowOffset:{
@@ -19,10 +19,12 @@ export const styles = StyleSheet.create({
         shadowOpacity: 0.22,
         shadowRadius: 2.22,
         elevation: 3,
+
     },
     header: {
         flexDirection: "row",
-        alignItems: "center"
+        alignItems: "center",
+        paddingHorizontal: 16,
     },
     headerText: {
         paddingHorizontal: 16,
@@ -41,7 +43,8 @@ export const styles = StyleSheet.create({
         flexDirection: "row",
         width: "100%",
         justifyContent: "space-evenly",
-        paddingTop: 4
+        paddingTop: 4,
+        paddingHorizontal: 16,
     },
     socialButtons: {
         borderRadius: 32,
