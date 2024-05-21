@@ -5,10 +5,11 @@ import { FontAwesome6 } from '@expo/vector-icons';
 import { Feather } from '@expo/vector-icons';
 
 interface ProfileProps {
-    firstName: string,
-    lastName: string,
-    role: string,
-    age: number,
+    firstName: string;
+    lastName: string;
+    role: string;
+    age: number;
+    children: React.ReactNode;
 }
 
 
@@ -16,13 +17,14 @@ const Profile: React.FC<ProfileProps> = ({
     firstName,
     lastName,
     role,
-    age
+    age,
+    children
 }) => {
     return <View style={styles.container}>
         <View style={styles.header}>
             <Image style={styles.avatar} source={{ uri: "https://media.licdn.com/dms/image/C4D03AQGHweB6Q1fYiw/profile-displayphoto-shrink_800_800/0/1621341335727?e=1721260800&v=beta&t=p8-GYnMoyo3zUDd2u8v2rYmkdm4wiRD3x-mR9qInwQo" }} />
             <View style={styles.headerText}>
-                <Text style={styles.name}>{firstName} {lastName}</Text>
+                <Text style={styles.name}>{firstName} {lastName} {children}</Text>
                 <Text>{role} | {age}</Text>
             </View>
         </View>
