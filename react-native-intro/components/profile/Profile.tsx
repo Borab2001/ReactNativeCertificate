@@ -22,13 +22,6 @@ const Profile: React.FC<ProfileProps> = ({
     image,
     children
 }) => {
-
-    if (age > 100) {
-        return <Text>Yes, I'm old</Text>
-	} else {
-        return <Text>I'm quite young</Text>
-    }
-
     return <View style={styles.container}>
         {image}
         <View style={styles.header}>
@@ -36,6 +29,7 @@ const Profile: React.FC<ProfileProps> = ({
             <View style={styles.headerText}>
                 <Text style={styles.name}>{firstName} {lastName} {children}</Text>
                 <Text>{role} | {age}</Text>
+                <Text>{age > 100 ? "Yes, I'm old" : "Yes, I'm young"}</Text>
             </View>
         </View>
         <View style={styles.social}>
