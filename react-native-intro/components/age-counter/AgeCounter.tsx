@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Text, TouchableOpacity, View } from "react-native";
 import { styles } from "./AgeCounter.style";
+import DisplayAge from "./DisplayAge";
 
 export function AgeCounter() {
     const [age, setAge] = useState(23);
@@ -12,7 +13,7 @@ export function AgeCounter() {
 
     return (
         <View style={styles.container}>
-            <Text>I am {age} years old</Text>
+            <DisplayAge age={age} />
             <TouchableOpacity onPress={increaseAge} style={styles.button}>
                 <Text style={styles.buttonText}>Increase</Text>
             </TouchableOpacity>
