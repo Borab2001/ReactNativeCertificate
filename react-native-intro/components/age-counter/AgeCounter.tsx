@@ -5,10 +5,16 @@ import DisplayAge from "./DisplayAge";
 
 export function AgeCounter() {
     const [age, setAge] = useState(23);
+    const [fruit, setFruit] = useState("Banana");
 
     function increaseAge() {
         setAge(age + 1)
         console.log(age);
+    }
+
+    function changeFruit() {
+        setFruit("Apple")
+        console.log(fruit);
     }
 
     return (
@@ -16,6 +22,11 @@ export function AgeCounter() {
             <DisplayAge age={age} />
             <TouchableOpacity onPress={increaseAge} style={styles.button}>
                 <Text style={styles.buttonText}>Increase</Text>
+            </TouchableOpacity>
+
+            <Text style={{ fontSize: 24 }}>Fruit: {fruit}</Text>
+            <TouchableOpacity onPress={changeFruit} style={styles.button}>
+                <Text style={styles.buttonText}>Change</Text>
             </TouchableOpacity>
         </View>
     )
