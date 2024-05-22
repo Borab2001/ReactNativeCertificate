@@ -14,8 +14,8 @@ export function AgeCounter() {
 
     function changeFruit() {
         setFruit("Apple")
-        console.log(fruit);
     }
+    console.log(fruit);
 
     return (
         <View style={styles.container}>
@@ -24,9 +24,8 @@ export function AgeCounter() {
                 <Text style={styles.buttonText}>Increase</Text>
             </TouchableOpacity>
 
-            <Text style={{ fontSize: 24 }}>Fruit: {fruit}</Text>
             <TouchableOpacity onPress={changeFruit} style={styles.button}>
-                <Text style={styles.buttonText}>Change</Text>
+                <Text style={styles.buttonText}>{fruit}</Text>
             </TouchableOpacity>
         </View>
     )
