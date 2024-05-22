@@ -8,10 +8,11 @@ export const styles = StyleSheet.create({
     },
     button: {
         backgroundColor: "black",
+        padding: 4
     },
     buttonText: {
         color: "white",
-        fontSize: 24,
+        fontSize: 20,
         textAlign: "center"
     }
 })

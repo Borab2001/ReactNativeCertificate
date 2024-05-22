@@ -8,7 +8,7 @@ const DisplayAge: React.FC<DisplayAgeProps> = ({
     age
 }) => {
     return (
-        <Text>I am {age} years old</Text>
+        <Text style={{ fontSize: 24 }}>I am {age} years old</Text>
     );
 }
  
