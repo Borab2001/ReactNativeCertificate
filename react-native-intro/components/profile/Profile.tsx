@@ -11,7 +11,7 @@ interface ProfileProps {
     age: number;
     image: React.ReactElement,
     children: React.ReactNode;
-    isHappy: boolean;
+    isOpenToWork: boolean;
 }
 
 
@@ -22,7 +22,7 @@ const Profile: React.FC<ProfileProps> = ({
     age,
     image,
     children,
-    isHappy
+    isOpenToWork
 }) => {
     return <View style={styles.container}>
         {image}
@@ -32,9 +32,11 @@ const Profile: React.FC<ProfileProps> = ({
                 <Text style={styles.name}>{firstName} {lastName} {children}</Text>
                 <Text>{role} | {age}</Text>
                 <Text>{age > 100 ? "Yes, I'm old" : "Yes, I'm young"}</Text>
-                {isHappy && 
-                    <Text style={{ fontStyle: 70 }}>I'm happy</Text>
-                }
+                {isOpenToWork ? (
+                    <Text style={{ color: "black", backgroundColor: "#f6f6f6", padding: 4, borderRadius: 10}}>I'm open to work</Text>
+                ) : (
+                    <Text style={{ color: "red", backgroundColor: "#f6f6f6", padding: 4, borderRadius: 10}}>I'm not looking for a job</Text>
+                )}
             </View>
         </View>
         <View style={styles.social}>

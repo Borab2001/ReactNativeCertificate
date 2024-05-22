@@ -15,7 +15,7 @@ export default function HomeScreen() {
 					role={"Software Engineer at Capgemini ♠️"} 
 					age={23}
 					image={<Image style={{height: 80, width: "100%", borderTopLeftRadius: 8, borderTopRightRadius: 8}} source={{ uri: "https://media.licdn.com/dms/image/D4E16AQHSOnyGAwdfgQ/profile-displaybackgroundimage-shrink_350_1400/0/1696234342232?e=1721865600&v=beta&t=OmhhLQc0M66x7Tg5YHOvrqENdzlJhmuTF-GDD2gzowA"}} />}
-					isHappy
+					isOpenToWork
 				>
 					🇫🇷
 				</Profile>
