@@ -1,3 +1,4 @@
+import { AgeCounter } from '@/components/age-counter/AgeCounter';
 import Profile from '@/components/profile/Profile';
 import { Image, StyleSheet, Text, View } from 'react-native';
 import { SafeAreaProvider, SafeAreaView } from "react-native-safe-area-context";
@@ -9,7 +10,7 @@ export default function HomeScreen() {
 			<SafeAreaView style={styles.section}>
 				<Text style={styles.title}>Hello World</Text>
 				<Text style={styles.subtitle}>Welcome back mate</Text>
-				<Profile 
+				{/* <Profile 
 					firstName={"Bora"} 
 					lastName={"Balos"} 
 					role={"Software Engineer at Capgemini ♠️"} 
@@ -18,7 +19,8 @@ export default function HomeScreen() {
 					isOpenToWork
 				>
 					🇫🇷
-				</Profile>
+				</Profile> */}
+				<AgeCounter />
 			</SafeAreaView>
 		</SafeAreaProvider>
 	);
