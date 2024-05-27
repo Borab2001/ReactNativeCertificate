@@ -11,8 +11,20 @@ export default function HomeScreen() {
 		Alert.alert("Hello! " + name);
 		setCountClick(countClick+1)
 	}
-	function redirectToGithub() {
-		Linking.openURL("https://github.com/Borab2001")	
+	function redirectToSocial(socialMedia: any) {
+		let url = "";
+		switch(socialMedia) {
+			case "linkedin":
+				url = "https://www.linkedin.com/in/bora-balos/";
+				break;
+			case "github":
+				url = "https://github.com/Borab2001";
+				break;
+			case "twitter":
+				url = "https://x.com/borab2001";
+				break;
+		}
+		Linking.openURL(url)	
 	}
 	return (
 		<SafeAreaProvider>
@@ -21,7 +33,7 @@ export default function HomeScreen() {
 				<Text style={styles.subtitle}>Welcome back mate</Text>
 				<Profile
 					onPressTitle={hello}
-					onPressGithub={redirectToGithub}
+					onPressSocialMedia={redirectToSocial}
 					firstName={"Bora"} 
 					lastName={"Balos"} 
 					role={"Software Engineer at Capgemini ♠️"} 

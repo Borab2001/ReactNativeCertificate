@@ -13,7 +13,7 @@ interface ProfileProps {
     children: React.ReactNode;
     isOpenToWork: boolean;
     onPressTitle: (name: string) => void;
-    onPressGithub: () => void;
+    onPressSocialMedia: (socialMedia: any) => void;
 }
 
 
@@ -26,7 +26,7 @@ const Profile: React.FC<ProfileProps> = ({
     children,
     isOpenToWork,
     onPressTitle,
-    onPressGithub
+    onPressSocialMedia
 }) => {
     
     function onClickTitle() {
@@ -49,13 +49,13 @@ const Profile: React.FC<ProfileProps> = ({
             </View>
         </View>
         <View style={styles.social}>
-            <TouchableOpacity style={styles.socialButtons}>
+            <TouchableOpacity onPress={() => onPressSocialMedia("twitter")} style={styles.socialButtons}>
                 <FontAwesome6 name="x-twitter" size={24} color="black" />
             </TouchableOpacity>
-            <TouchableOpacity onPress={onPressGithub} style={styles.socialButtons}>
+            <TouchableOpacity onPress={() => onPressSocialMedia("github")} style={styles.socialButtons}>
                 <Feather name="github" size={24} color="black" />
             </TouchableOpacity>
-            <TouchableOpacity style={styles.socialButtons}>
+            <TouchableOpacity onPress={() => onPressSocialMedia("linkedin")} style={styles.socialButtons}>
                 <Feather name="linkedin" size={24} color="black" />
             </TouchableOpacity>
         </View>
