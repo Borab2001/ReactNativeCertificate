@@ -1,7 +1,7 @@
 import { AgeCounter } from '@/components/age-counter/AgeCounter';
 import Profile from '@/components/profile/Profile';
 import { useState } from 'react';
-import { Alert, Image, StyleSheet, Text, View } from 'react-native';
+import { Alert, Image, Linking, StyleSheet, Text, View } from 'react-native';
 import { SafeAreaProvider, SafeAreaView } from "react-native-safe-area-context";
 
 
@@ -11,6 +11,9 @@ export default function HomeScreen() {
 		Alert.alert("Hello! " + name);
 		setCountClick(countClick+1)
 	}
+	function redirectToGithub() {
+		Linking.openURL("https://github.com/Borab2001")	
+	}
 	return (
 		<SafeAreaProvider>
 			<SafeAreaView style={styles.section}>
@@ -18,6 +21,7 @@ export default function HomeScreen() {
 				<Text style={styles.subtitle}>Welcome back mate</Text>
 				<Profile
 					onPressTitle={hello}
+					onPressGithub={redirectToGithub}
 					firstName={"Bora"} 
 					lastName={"Balos"} 
 					role={"Software Engineer at Capgemini ♠️"} 
