@@ -1,12 +1,15 @@
 import { AgeCounter } from '@/components/age-counter/AgeCounter';
 import Profile from '@/components/profile/Profile';
+import { useState } from 'react';
 import { Alert, Image, StyleSheet, Text, View } from 'react-native';
 import { SafeAreaProvider, SafeAreaView } from "react-native-safe-area-context";
 
 
 export default function HomeScreen() {
+	const [countClick, setCountClick] = useState(0);
 	function hello(name: string) {
 		Alert.alert("Hello! " + name);
+		setCountClick(countClick+1)
 	}
 	return (
 		<SafeAreaProvider>
@@ -24,6 +27,7 @@ export default function HomeScreen() {
 				>
 					🇫🇷
 				</Profile>
+				<Text>Title Click Count : {countClick}</Text>
 				<AgeCounter />
 			</SafeAreaView>
 		</SafeAreaProvider>
