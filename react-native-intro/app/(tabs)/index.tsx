@@ -1,7 +1,7 @@
 import { AgeCounter } from '@/components/age-counter/AgeCounter';
 import Profile from '@/components/profile/Profile';
 import { useState } from 'react';
-import { Alert, Image, Linking, StyleSheet, Text, View } from 'react-native';
+import { Alert, Image, Linking, Platform, StyleSheet, Text, View } from 'react-native';
 import { SafeAreaProvider, SafeAreaView } from "react-native-safe-area-context";
 
 
@@ -29,7 +29,12 @@ export default function HomeScreen() {
 	return (
 		<SafeAreaProvider>
 			<SafeAreaView style={styles.section}>
-				<Text style={styles.title}>Hello World</Text>
+				{
+					Platform.OS === "ios" && <Text style={styles.title}>Hello iPhone</Text>
+				}
+				{
+					Platform.OS === "android" && <Text style={styles.title}>Hello Android</Text>
+				}
 				<Text style={styles.subtitle}>Welcome back mate</Text>
 				<Profile
 					onPressTitle={hello}
