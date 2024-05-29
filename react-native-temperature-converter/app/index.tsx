@@ -3,6 +3,7 @@ import { SafeAreaProvider, SafeAreaView } from "react-native-safe-area-context";
 import { styles } from "./styles";
 import Input from "@/components/input/Input";
 import { useState } from "react";
+import DisplayTemperature from "@/components/display-temperature/DisplayTemperature";
 
 
 export default function Index() {
@@ -14,7 +15,7 @@ export default function Index() {
 		<SafeAreaProvider>
 			<SafeAreaView style={styles.root}>
 				<View style={styles.workspace}>
-					<Text>{inputValue.toString()}</Text>
+					<DisplayTemperature temperature={inputValue.toString()} />
 					<Input onChange={setInputValue} defaultValue="0" />
 					<Text>Button</Text>
 				</View>
