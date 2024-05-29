@@ -1,6 +1,7 @@
 import { ImageBackground, Text, View } from "react-native";
 import { SafeAreaProvider, SafeAreaView } from "react-native-safe-area-context";
 import { styles } from "./styles";
+import Input from "@/components/input/Input";
 
 
 export default function Index() {
@@ -10,7 +11,7 @@ export default function Index() {
 			<SafeAreaView style={styles.root}>
 				<View style={styles.workspace}>
 					<Text>Temperature</Text>
-					<Text>Input</Text>
+					<Input defaultValue="0" />
 					<Text>Button</Text>
 				</View>
 			</SafeAreaView>
