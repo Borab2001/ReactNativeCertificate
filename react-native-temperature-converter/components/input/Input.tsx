@@ -3,12 +3,14 @@ import { styles } from "./Input.style";
 
 interface InputProps {
     defaultValue: string;
+    unit: string;
     onChange: (text: string) => void;
 }
 
 const Input: React.FC<InputProps> = ({
     defaultValue,
-    onChange
+    onChange,
+    unit
 }) => {    return (
         <View style={styles.container}>
             <TextInput 
@@ -18,7 +20,7 @@ const Input: React.FC<InputProps> = ({
                 defaultValue={defaultValue}
                 onChangeText={(text) => onChange(text)}
             />
-            <Text style={styles.unit}>°C</Text>
+            <Text style={styles.unit}>{unit}</Text>
         </View>
     )
 }

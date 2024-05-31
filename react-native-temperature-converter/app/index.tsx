@@ -9,14 +9,15 @@ import DisplayTemperature from "@/components/display-temperature/DisplayTemperat
 export default function Index() {
 
 	const [inputValue, setInputValue] = useState("0");
+	const [currentUnit, setCurrentUnit] = useState("°C");
 
   return (
 	<ImageBackground style={styles.backgroundImage} source={require('@/assets/images/hot.png')}>
 		<SafeAreaProvider>
 			<SafeAreaView style={styles.root}>
 				<View style={styles.workspace}>
-					<DisplayTemperature temperature={inputValue.toString()} />
-					<Input onChange={setInputValue} defaultValue="0" />
+					<DisplayTemperature temperature={inputValue.toString()} unit={currentUnit} />
+					<Input onChange={setInputValue} defaultValue="0" unit={currentUnit} />
 					<Text>Button</Text>
 				</View>
 			</SafeAreaView>

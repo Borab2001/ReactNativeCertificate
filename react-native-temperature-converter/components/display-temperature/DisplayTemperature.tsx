@@ -3,14 +3,16 @@ import { styles } from "./DisplayTemperature.style";
 
 interface DisplayTemperatureProps {
     temperature: string;
+    unit: string;
 }
 
 const DisplayTemperature: React.FC<DisplayTemperatureProps> = ({
-    temperature
+    temperature,
+    unit
 }) => {
     return (
         <Text style={styles.temperature}>
-            {temperature}
+            {temperature}{unit}
         </Text>
     )
 }
